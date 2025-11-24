@@ -1,0 +1,374 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'); */
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    cursor:default;
+}
+::selection{
+    background-color: none;
+    color: none;
+}
+
+body{
+     background-color: black; 
+     color: white; 
+}
+
+.left{
+    width: 25vw;
+    padding: 10px;
+}
+.right{
+    width: 75vw;
+}
+
+.home ul li{
+    display: flex;
+    gap: 15px;
+    width: 14px;
+    list-style: none;
+    padding-top: 14px;
+    font-weight: bold;
+}
+.library{
+    min-height: 70vh;
+    position: relative;
+}
+.heading{
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    padding: 23px 14px;
+    padding-top: 14px;
+    align-items: center;
+    font-size: 13px;
+}
+.heading img{
+    width: 25px;
+}
+.footer{
+    display: flex;
+    font-size: 7px;
+    gap: 10px;
+    position: absolute;
+    bottom: 0;
+    padding: 10px 0;
+}
+.right{
+    margin: 16px 0;
+    position: relative;
+}
+.footer a{
+    color: grey;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    gap: 4px;
+    background-color: rgb(35, 34, 34);
+    align-items: center;
+}
+.header > *{
+    padding: 20px;
+}
+.spotifyPlaylists{
+    padding: 15px;
+}
+.card >*{
+    padding-top: 9px;
+}
+.cardcontainer{
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 30px;
+    overflow: scroll;
+    
+}
+.card{
+    width: 200px;
+    padding: 10px;
+    border-radius:5px ;
+    background-color: #252525;
+    position: relative;
+}
+.spotifyPlaylists .card img{
+    width: 100%;
+    object-fit: contain;
+}
+.play{
+    position: absolute;
+    top: 162px;
+    right:16px;
+    opacity: 0;
+    transition: all 1s ease-out;
+}
+.signupbtn{
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    background-color: rgb(35, 34, 34); 
+    border-radius: 50px; 
+    transition: background-color 0.3s ease-in-out;
+    transition:color 0.2s ease-in-out;
+
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border: 2px solid rgb(35, 34, 34);
+    transition: 1.5s ease-out;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.signupbtn::before {
+    transition: 1s all ease;
+    content: "";
+    position: absolute;
+    width: 0;
+    top: 0;
+  bottom: 0;
+  left: 0;
+    right: 0;
+    background-color: rgb(52, 50, 50);
+    z-index: -1;
+    height:100%;
+    border: 0;
+  }
+  .signupbtn:hover{
+    color: rgb(0, 0, 0);
+  }
+  .signupbtn:hover::before{
+   width: 100%;
+  }
+.loginbtn{
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    background-color: white; 
+    border-radius: 50px; 
+    transition: background-color 0.3s ease-in-out;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.loginbtn:hover {
+    background-color: rgb(183, 176, 176); 
+  }
+.playbar{
+    left: 341px;
+    position: fixed;
+    bottom: 19px;
+    background-color: rgb(216, 226, 226);
+    width: 71.5%;
+    padding: 12px;
+    background: #dad5d5;
+    filter: invert(1);
+    border-radius:7px ;
+    height: 40px;
+}
+.songbuttons{
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+.songLists{
+    height: 312px;
+    overflow: auto;
+}
+.songLists ul{
+    padding: 0 12px;
+}
+.songLists ul li{
+    list-style-type: decimal;
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+  padding: 12px 0;
+  border: 1px solid white;
+  margin: 6px 0;
+  padding: 6px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  justify-content: space-between;
+}
+.songLists .info{
+    width: 346px;
+}
+
+.seekbar{
+    height: 4px;
+    width: 97%;
+   background-color:  rgb(0, 0, 0);
+    position: absolute;
+    bottom: 0;
+    border-radius: 10px;
+    margin: 6px;
+    padding: 0.5px;
+    cursor: pointer;
+}
+.circle{
+    width: 13px;
+    height: 13px;
+    border-radius: 13px;
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    bottom: 6px;
+    left: 0%;
+    transition: left 0.2s;
+}
+.songbuttons img{
+    cursor: pointer;
+}
+.songinfo, .songtime{
+    color: black;
+    padding: 0 12px;
+}
+.songinfo{
+    width: 200px;
+
+}
+#control{
+    cursor: pointer;
+}
+
+.songtime{
+    width: 200px;
+    display: flex;
+  justify-content: end;
+}
+.abovebar{
+    display: flex;
+    justify-content: space-between;
+}
+.timevol{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.relement{
+    display: flex;
+    align-items: center;
+  width: 282px;
+  height: 36px;
+}
+.volume{
+    width: 216px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+}
+#control{
+    width: 95px;
+}
+.volimg{
+    position: relative; bottom: 2px;
+}
+
+#loopButton {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    margin-left: 10px;
+}
+
+#loopButton.active {
+    filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(119%) contrast(119%);
+}
+body {
+    font-family: Arial, sans-serif;
+}
+
+.marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#randomTextMarquee {
+    display: inline-block;
+    animation: marqueeAnimation linear infinite;
+    animation-duration: 20s; 
+
+}
+.pbtn{
+    width: 123px;
+  height: 49px;
+}
+summary {
+    list-style: none;
+    cursor: pointer; 
+}
+details{
+    
+    color: rgb(0, 0, 0);
+    border-radius: 2px;
+    width: 244px;
+    font-size: 13px;
+    height: 47px;
+    background-color: rgb(255, 255, 255);
+    overflow: scroll;
+}
+option{
+    cursor: pointer;
+}
+option:hover{
+    background-color: rgb(97, 90, 90);
+}
+.fav{
+    position: absolute;
+  left: 255px;
+  top: 16px;
+  fill: black;
+}
+.fav:active{
+    fill: red;
+}
+.favbtn{
+    width: 100px;
+    cursor: pointer;
+}
+.reset{
+    width: 100px;
+    display: none;
+}
+.Clickedfav{
+    background-color: rgba(0, 0, 0, 0.113);
+}
+@keyframes marqueeAnimation {
+    from {
+        transform: translateX(100%);
+       
+    }
+    to {
+        transform: translateX(-100%);
+       
+    }
+}
+.recent-card{
+   overflow: scroll;
+  height: 100px;
+  width: 382px;
+  padding: 17px;
+}
+
+.con{
+    display: flex;
+    height: 40vh;
+    width: 100%;
+    gap: 20px;
+}
+.page1{
+    height: 100vh;
+    width: 100vw;
+}
